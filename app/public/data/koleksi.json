@@ -1,10 +1,82 @@
 [
   {
+    "id": "1",
+    "judul": "CIBT CUP 2026",
+    "kategori": "Olahraga",
+    "tanggal": "10 Oktober 2026",
+    "lokasi": "Whapec Arena",
+    "penyelenggara": "ITERA Basketball Team"
+  },
+  {
     "id": "2",
-    "judul": "Contoh item pertama",
-    "kategori": "Contoh",
-    "fieldTema1": "ganti sesuai field tema",
-    "fieldTema2": 0,
-    "fieldTema3": "ganti sesuai field tema"
+    "judul": "Parade Riuh Wisuda ITERA 2025",
+    "kategori": "Wisuda",
+    "tanggal": "14 November 2025",
+    "lokasi": "ITERA",
+    "penyelenggara": "KM ITERA"
+  },
+  {
+    "id": "3",
+    "judul": "Seminar edukasi Web3 dan Blockchain",
+    "kategori": "Seminar",
+    "tanggal": "28 April 2025",
+    "lokasi": "ITERA",
+    "penyelenggara": "HMIF ITERA"
+  },
+  {
+    "id": "4",
+    "judul": "UTS Kewarganegaraan",
+    "kategori": "Kuliah",
+    "tanggal": "31 Oktober 2026",
+    "lokasi": "ITERA",
+    "penyelenggara": "Dosen Kewarganegaraan ITERA"
+  },
+  {
+    "id": "5",
+    "judul": "HMEI Berkumpul",
+    "kategori": "Organisasi",
+    "tanggal": "24 Oktober 2026",
+    "lokasi": "ITERA",
+    "penyelenggara": "HMEI ITERA"
+  },
+  {
+    "id": "6",
+    "judul": "Mobile Legends Tournament INFEST 2026",
+    "kategori": "Lomba",
+    "tanggal": "25 Oktober 2026",
+    "lokasi": "ITERA",
+    "penyelenggara": "HMIF ITERA"
+  },  
+  {
+    "id": "7",
+    "judul": "Persitera Cup 2026",
+    "kategori": "Olahraga",
+    "tanggal": "28 Oktober 2026",
+    "lokasi": "Gor UIN Raden Intan",
+    "penyelenggara": "PERSITERA"
+  },
+  {
+    "id": "8",
+    "judul": "Ramah Tamah HMIF X HMMT",
+    "kategori": "Organisasi",
+    "tanggal": "14 September 2026",
+    "lokasi": "ITERA",
+    "penyelenggara": "HMIF ITERA X HMMT ITERA"
+  },
+  {
+    "id": "9",
+    "judul": "UTS Basis Data",
+    "kategori": "Kuliah",
+    "tanggal": "23 Oktober 2026",
+    "lokasi": "ITERA",
+    "penyelenggara": "Dosen Basis Data ITERA"
+  },
+  {
+    "id": "10",
+    "judul": "Workhsop",
+    "kategori": "Seminar",
+    "tanggal": "10 Oktober 2026",
+    "lokasi": "ITERA",
+    "penyelenggara": "HMIF ITERA"
   }
 ]
