@@ -1,20 +1,18 @@
 import useKoleksi from '../hooks/useKoleksi.js'
+import KartuItem from '../components/KartuItem.jsx'
 
 export default function Koleksi() {
   const { items, loading, error } = useKoleksi()
 
-  if (loading) return <p role="status">Memuat koleksi...</p>
-  if (error) return <p role="alert">Gagal memuat koleksi: {error}</p>
+  if (loading) return <p>Memuat data...</p>
+  if (error) return <p role="alert">Gagal memuat: {error}</p>
 
   return (
     <section>
       <h1>Koleksi</h1>
       <div className="daftar-kartu">
         {items.map((item) => (
-          <article className="kartu" key={item.id}>
-            <h2>{item.judul}</h2>
-            <p>{item.deskripsi}</p>
-          </article>
+          <KartuItem key={item.id} item={item} />
         ))}
       </div>
     </section>
