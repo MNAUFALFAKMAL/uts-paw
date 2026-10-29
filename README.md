@@ -65,17 +65,24 @@ Ganti seluruh isi berkas ini dengan dokumentasi aplikasimu (butir rubrik A4). Ke
 ```markdown
 # Nama Aplikasi
 
-Nama: ...
-NIM: ...
-Kelas: ...
-Tema: ...
-Deployment: https://USERNAME.github.io/uts-paw/
+Nama: Muhammad Naufal Fikri Akmal
+NIM: 123140132
+Kelas: RA
+Tema: Agenda Kegiatan Kampus
+Deployment: https://mnaufalfakmal.github.io/uts-paw/
 
 ![Tangkapan layar beranda](docs/beranda.png)
 
 ## Fitur
 
-- ...
+- Menampilkan daftar agenda kegiatan kampus
+- Pencarian berdasarkan judul agenda
+- Filter kategori agenda
+- Halaman detail agenda beserta tombol hapus
+- Form tambah agenda baru dengan validasi
+- Halaman statistik jumlah agenda per kategori
+- Halaman tentang dengan nama dan NIM
+
 
 ## Menjalankan secara lokal
 
@@ -85,5 +92,11 @@ npm run dev
 
 ## Konsep React yang dipakai
 
-- ...
+- useState dan useEffect
+- Context API (createContext, Provider, useContext)
+- React Router (NavLink, useParams, useNavigate)
+- Minimal 5 komponen fungsional
+- LocalStorage untuk penyimpanan data
+- HTML semantik & CSS responsif
+- Vitest + Testing Library untuk testing
 ```
