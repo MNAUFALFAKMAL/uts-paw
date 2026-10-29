@@ -8,26 +8,65 @@ export function KoleksiProvider({ children }) {
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    if (items !== null) return
+    if (items !== null) {
+      setLoading(false)
+      return
+    }
+    let aktif = true
+    
     async function muat() {
       try {
-        const res = await fetch(`${import.meta.env.BASE_URL}data/koleksi.json`)
-        if (!res.ok) throw new Error(`Gagal memuat data (status ${res.status})`)
-        setItems(await res.json())
+        const res = await fetch(
+          `${import.meta.env.BASE_URL}data/koleksi.json`
+        )
+        if (!res.ok) {
+          throw new Error(`Gagal memuat data (status ${res.status})`)
+        }
+        const data = await res.json()
+        if (aktif) {
+          setItems((lama) => lama ?? data)
+        }
       } catch (err) {
-        setError(err.message)
+        if (aktif) setError(err.message)
       } finally {
-        setLoading(false)
+        if (aktif) setLoading(false)
       }
     }
     muat()
+    
+    return () => {
+      aktif = false
+    }
   }, [items, setItems])
 
-  const tambah = (item) => setItems((lama) => [...(lama ?? []), { ...item, id: String(Date.now()) }])
-  const hapus = (id) => setItems((lama) => lama.filter((item) => item.id !== id))
+  const tambah = (item) => {
+    setItems((lama) => [
+      ...(lama ?? []),
+      {
+        ...item,
+        id: item.id ?? String(Date.now()),
+      },
+    ])
+  }
+
+  const hapus = (id) => {
+    setItems((lama) =>
+      (lama ?? []).filter(
+        (item) => String(item.id) !== String(id)
+      )
+    )
+  }
 
   return (
-    <KoleksiContext.Provider value={{ items: items ?? [], loading, error, tambah, hapus }}>
+    <KoleksiContext.Provider
+      value={{
+        items: items ?? [],
+        loading,
+        error,
+        tambah,
+        hapus,
+      }}
+    >
       {children}
     </KoleksiContext.Provider>
   )

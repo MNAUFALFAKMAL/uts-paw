@@ -1,0 +1,46 @@
+.form-tambah {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 480px;
+}
+
+.form-tambah label {
+  display: block;
+  margin-top: 0.75rem;
+  font-weight: 600;
+}
+
+.form-tambah input,
+.form-tambah select {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #c4c4c4;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.form-tambah [role='alert'] {
+  margin: 0;
+  color: #b42318;
+  font-size: 0.9rem;
+}
+
+.form-tambah button {
+  align-self: flex-start;
+  margin-top: 1rem;
+  padding: 0.6rem 1.5rem;
+  border: 0;
+  border-radius: 6px;
+  background: #1f2328;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .form-tambah button {
+    align-self: stretch;
+  }
+}
