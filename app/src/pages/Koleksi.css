@@ -1,0 +1,26 @@
+.alat-koleksi {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.alat-koleksi input,
+.alat-koleksi select {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+
+.daftar-kartu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.kartu {
+  padding: 18px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: white;
+}
