@@ -13,10 +13,10 @@ export default function Statistik() {
   const jumlahKategori = Object.keys(perKategori).length
 
   return (
-    <section>
+    <section id="halaman-statistik">
       <h1>Statistik</h1>
 
-      <div className="statistik-ringkasan">
+      <div id="ringkasan-statistik" className="statistik-ringkasan">
         <div className="statistik-item">
           <h2>Jumlah Agenda</h2>
           <p>{items.length}</p>
@@ -28,7 +28,7 @@ export default function Statistik() {
         </div>
       </div>
 
-      <div className="tabel-gulir">
+      <div id="wadah-tabel-statistik" className="tabel-gulir">
         <table className="tabel-data">
           <thead>
             <tr>

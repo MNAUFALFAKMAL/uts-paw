@@ -40,3 +40,27 @@
     padding: 0.4rem 0.5rem;
   }
 }
+
+#halaman-statistik {
+  padding: 1rem;
+}
+
+#ringkasan-statistik {
+  margin-bottom: 1.5rem;
+}
+
+#wadah-tabel-statistik {
+  border-radius: 8px;
+}
+
+.tabel-data tbody tr:hover {
+  background: #eef2e8;
+}
+
+.tabel-data th:focus-visible {
+  outline: 2px solid #17579f;
+}
+
+.statistik-item h2::before {
+  content: "• ";
+}
