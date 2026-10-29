@@ -1,11 +1,10 @@
-
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import useKoleksi from '../hooks/useKoleksi.js'
 
 export default function Detail() {
   const { id } = useParams()
   const navigate = useNavigate()
-  const { items, loading, error } = useKoleksi()
+  const { items, loading, error, hapus } = useKoleksi()
 
   const agenda = items.find((item) => String(item.id) === id)
 
@@ -20,6 +19,13 @@ export default function Detail() {
         <Link to="/koleksi">Kembali ke daftar agenda</Link>
       </section>
     )
+  }
+
+  const konfirmasiHapus = () => {
+    if (window.confirm(`Hapus "${agenda.judul}"?`)) {
+      hapus(agenda.id)
+      navigate('/koleksi')
+    }
   }
 
   return (
@@ -43,6 +49,9 @@ export default function Detail() {
       <div className="aksi">
         <button type="button" onClick={() => navigate('/koleksi')}>
           Kembali
+        </button>
+        <button type="button" onClick={konfirmasiHapus}>
+          Hapus
         </button>
         <Link to="/tambah">Tambah agenda</Link>
       </div>
