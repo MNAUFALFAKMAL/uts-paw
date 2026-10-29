@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import BadgeKategori from './BadgeKategori'
 
 export default function KartuItem({ item }) {
   const { id, judul, kategori, tanggal } = item
@@ -8,7 +9,7 @@ export default function KartuItem({ item }) {
         <Link to={`/koleksi/${id}`}>{judul}</Link>
       </h3>
       <p>
-        {kategori} · tanggal {tanggal}
+        <BadgeKategori kategori={kategori} /> · tanggal {tanggal}
       </p>
     </article>
   )

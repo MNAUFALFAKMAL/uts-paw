@@ -13,8 +13,8 @@ export default function Layout() {
   return (
     <div className="kerangka">
       <header className="kepala">
-        <strong>Daftar Tugas</strong>
-        <nav className="menu">
+        <strong>Agenda Kegiatan Kampus ITERA</strong>
+        <nav className="menu" aria-label="Menu Navigasi">
           {MENU.map(({ ke, label }) => (
             <NavLink key={ke} to={ke} end={ke === '/'}>
               {label}
