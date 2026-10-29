@@ -9,7 +9,9 @@ export default function KartuItem({ item }) {
         <Link to={`/koleksi/${id}`}>{judul}</Link>
       </h3>
       <p>
-        <BadgeKategori kategori={kategori} /> · tanggal {tanggal}
+        tanggal {tanggal}
+        <br />
+        <BadgeKategori kategori={kategori} /> 
       </p>
     </article>
   )
